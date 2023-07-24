@@ -10,3 +10,4 @@ This project utilizes a machine-learning model to predict the availability of bi
 historical data and weather information to predict bike availability. Other tech used for this project include Google Maps and 
 Chart.JS. The website is not live due to budget reasons. However, screenshots are provided.
 
+<img src='/File_dumps/Screenshot 2023-05-01 at 19.49.21.png'/>
