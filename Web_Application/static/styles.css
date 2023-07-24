@@ -1,0 +1,236 @@
+body {
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    background-color: #010030;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1fr;
+    grid-template-rows: 0.75fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+#map {
+    grid-row: 1 / 4;
+    grid-column: 2 / 4;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    min-width: 50vw;
+}
+
+#station_info {
+    display: none;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#graph-parent{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+}
+
+#graph1 {
+    display: inline-block;
+    position: relative;
+    width: 95%;
+    height: 95%;
+    min-height: 150px;
+}
+
+#location_input {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    left: -2.5%;
+}
+
+#travel-mode {
+    position: relative;
+    display: flex;
+    width: 300px;
+    top: -25px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.radio-icon {
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+
+.radio-icon .fa-solid {
+    position: absolute;
+    top: 15px;
+    left: 25px
+}
+
+input {
+    height: 40px;
+    border-radius: 15px;
+    text-indent: 30px;
+    background-image: url("https://images2.imgbox.com/8b/64/Twifkt4W_o.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+#weather {
+    display: block;
+    position: relative;
+    padding-left: 20%;
+    padding-top: 2%;
+    color: white ;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    min-width: 350px;
+}
+
+#title {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+#weather-data {
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 3%;
+    padding: 0px;
+    width: 75%;
+    height: 63%;
+
+}
+
+#weather-data img {
+    padding-top: 5%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0%;
+}
+
+#weather-temperature {
+    display: inline-block;
+    position: absolute;
+    font-size: 35px;
+    left: 24%;
+    top: 35px;
+}
+
+#wind-speed {
+    position: absolute;
+    top: 70px;
+    left: 1%;
+}
+
+form {
+    width: 300px;
+}
+
+#pick-a-day {
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
+#pick-a-day:hover {
+    color: white;
+    background-color: #010030;
+    box-shadow: 0px 0px 4px 4px rgba(255,255,255,0.4);
+}
+
+#pick-an-hour {
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
+#pick-an-hour:hover {
+    color: white;
+    background-color: #010030;
+    box-shadow: 0px 0px 4px 4px rgba(255,255,255,0.4);
+}
+
+#marker-selector-bike {
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+    border:  1px solid #010030;
+    left: 51%;
+    top: 2%;
+    width: 13.5%;
+    height: 30px;
+    background-color: #010030;
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#marker-selector-bike .fa-solid {
+    margin-left: 30px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#marker-selector-parking {
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+    border:  1px solid #010030;
+    left: 65%;
+    top: 2%;
+    width: 14%;
+    height: 30px;
+    background-color: white;
+    color: #010030 ;
+    /* background-color: #010030; */
+    border-radius: 5px;
+    padding-top: 1px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#marker-selector-parking .fa-solid {
+    margin-left: 6px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+/* #marker-selector-parking:hover, #marker-selector-bike:hover {
+    background-color: white;
+    color: #010030;
+    cursor: pointer;
+} */
+

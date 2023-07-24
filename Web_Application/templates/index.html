@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbbikes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/styles.css" />
+    
+    <script src="https://kit.fontawesome.com/d4243df190.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="map">
+            
+            Map
+        </div>
+        <div id="marker-selector-bike"  onclick="redrawMarker('bike')"><i class="fa-solid fa-person-biking"></i> Bikes On Marker</div>
+        <div id="marker-selector-parking" onclick="redrawMarker('parking')"><i class="fa-solid fa-square-parking"></i> Parking Spots On Marker</div>
+
+
+        <div id="graph-parent">
+            <div id="graph1">
+            </div>
+        </div>
+        
+        <div id="weather">
+            <div id="title"><i class="fa-solid fa-person-biking"></i> 
+                DBBikes
+            </div>    
+            
+            <div id="weather-data">
+                <img src = "https://openweathermap.org/img/wn/10d@2x.png">
+                <div id = "weather-temperature">8.89 °C </div>
+                <p id = "wind-speed"><i class="fas fa-wind"></i> 3.09m/s
+                </p>
+            </div>
+        </div>
+        <div id="location_input">
+            <form name="location search" action="/search" method="post">
+                <input type="text" style="width: 100%;" class="autocomplete" id="starting_location" placeholder="Enter starting location or Click on a station..." onfocus = "startStationSelector()">
+                
+                <select id="pick-a-day" name="pick-date">
+                    <option value="avg" id="day-0" >Pick a day</option>
+                    <option value="0" id="day-1" >Today</option>
+                    <option value="1" id="day-2" >Day1</option>
+                    <option value="2" id="day-3" >Day2</option>
+                    <option value="3" id="day-4" >Day3</option>
+                    <option value="4" id="day-5" >Day4</option>
+                </select>
+
+                <select id="pick-an-hour" name="pick-hour">
+                    <option value="none" id="hour-0" >Pick an hour</option>
+                    <option value="06:00" id="hour-1" >06:00</option>
+                    <option value="09:00" id="hour-2" >09:00</option>
+                    <option value="12:00" id="hour-3" >12:00</option>
+                    <option value="15:00" id="hour-4" >15:00</option>
+                    <option value="18:00" id="hour-5" >18:00</option>
+                    <option value="21:00" id="hour-6" >21:00</option>
+                    <option value="00:00" id="hour-7" >00:00</option>
+                </select>
+                
+                <input type="text" style="width: 100%;" class="autocomplete" id="destination_location" placeholder="Enter destination or Click on a station..." onfocus = "endStationSelector()">
+            </form>
+            <div id="travel-mode">
+                <div class = "radio-icon">
+                <input type="radio" name="mode" id="travel-mode-cycling" value="BICYCLING" checked="checked" >
+                <i class="fa-solid fa-person-biking"></i>
+                </div>
+
+                <div class = "radio-icon">
+                <input type="radio" name="mode" id="travel-mode-walking" value="WALKING">
+                <i class="fa-solid fa-person-walking"></i>
+                </div>
+
+                <div class = "radio-icon">
+                <input type="radio" name="mode" id="travel-mode-driving" value = "DRIVING">
+                <i class="fa-solid fa-car"></i>
+                </div>
+
+                <div class="radio-icon">
+                <input type="radio" name="mode" id="travel-mode-transport" value="TRANSIT">
+                <i class="fa-solid fa-bus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="/static/index.js"></script>
+<script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAyJ5pu1ozFV1DqfvwuJ-XQakAUDCm-dOc&libraries=places&callback=initMap" async defer></script>
+
+</body>
+</html>
