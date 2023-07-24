@@ -15,5 +15,5 @@ Chart.JS. The website is not live due to budget reasons. However, screenshots ar
 <img src='/File_dumps/Screenshot 2023-05-01 at 19.47.14.png'/>
 
 The project management aspect of this undertaking is explained in our report. This was a group project that utilized the Agile Scrum methodology
-extensively. To read the report, click [here](/File_dumps/COMP30830 Project Report.pdf)
+extensively. To read the report, click [here](https://github.com/ItgelGanbold98/Dublin-Bikes-Website/blob/main/File_dumps/COMP30830%20Project%20Report.pdf)
 
